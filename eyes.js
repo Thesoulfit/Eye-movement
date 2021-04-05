@@ -1,12 +1,11 @@
-const balls = document.getElementsByClassName('ball');
+var balls = document.getElementsByClassName("ball");
+    document.onmousemove = () => {
+      var x = (Event.clientX * 100) / window.innerWidth + "%";
+      var y = (Event.clientY * 100) / window.innerHeight + "%";
 
-document.onmousemove = (event) => {
-  const x = (event.clientX * 100) / window.innerWidth + '%';
-  const y = (event.clientY * 100) / window.innerHeight + '%';
-
-for (let i=0; i<2; i++){}
-  balls[0].style.left = x;
-  balls[0].style.top = y;
-  balls[0].transform = 'translate(-' + x + ',-' + y + ')';
-}
-};
+      for (let i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].transfoorm = "translate(-" + x + ",-" + y + ")";
+      }
+    };
